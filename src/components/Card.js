@@ -48,8 +48,9 @@ const Card = () => {
   let incrementestimatedbills=(value)=>{
       setestimatedbills(value)
   }
-  const netbillvalue=avgbillvalue*estimatedbills;
-  const revenue=netbillvalue-(referaldiscount/100)*netbillvalue-referalreward*estimatedbills;
+  const netbillvalue=avgbillvalue-referalreward-(referaldiscount/100)*avgbillvalue;
+  const totalbill=avgbillvalue*estimatedbills
+  const revenue=totalbill-(referaldiscount/100)*totalbill-referalreward*estimatedbills;
 
 
   return (
