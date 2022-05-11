@@ -18,7 +18,7 @@ const details = {
   },
   referalreward: {
     lower: 50,
-    upper: 500,
+    upper: 1000,
     heading: "Referral Reward Amount",
     question:
       "How much would you like to reward referrers for referring their friends?",
@@ -189,8 +189,8 @@ const Card = () => {
           />
         </div>
         <div className="flex justify-between text-lg font-normal">
-          <div className="lower text-left">{details.estimatedbill.lower} Bills Each Month</div>
-          <div className="upper text-right">{details.estimatedbill.upper} Bills Each Month</div>
+          <div className="lower text-left">{details.estimatedbill.lower} Bills</div>
+          <div className="upper text-right">{details.estimatedbill.upper} Bills</div>
         </div>
       </div>
     </div>
