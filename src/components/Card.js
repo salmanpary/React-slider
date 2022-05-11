@@ -100,7 +100,7 @@ const Card = () => {
             max={details.referaldiscount.upper}
             defaultValue={details.referaldiscount.lower}
             onChange={incrementreferaldiscount}
-            step={10}
+            step={5}
             dotStyle={{ borderColor: 'black' }}
             activeDotStyle={{ borderColor: 'black' }}
             railStyle={{ backgroundColor: '', height: 10 }}
@@ -134,7 +134,7 @@ const Card = () => {
             max={details.referalreward.upper}
             defaultValue={details.referalreward.lower}
             onChange={incrementreferalreward}
-            step={10}
+            step={25}
             dotStyle={{ borderColor: 'black' }}
             activeDotStyle={{ borderColor: 'black' }}
             railStyle={{ backgroundColor: '', height: 10 }}
@@ -168,7 +168,7 @@ const Card = () => {
             max={details.estimatedbill.upper}
             defaultValue={details.estimatedbill.lower}
             onChange={incrementestimatedbills}
-            step={50}
+            step={20}
             dotStyle={{ borderColor: 'black' }}
             activeDotStyle={{ borderColor: 'black' }}
             railStyle={{ backgroundColor: '', height: 10 }}
