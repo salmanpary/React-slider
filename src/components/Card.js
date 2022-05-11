@@ -2,6 +2,7 @@ import "./card.css";
 import React, { useState } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import Renvenue from './Revenue'
 const details = {
   avgbillvalue: {
     lower: 200,
@@ -47,9 +48,12 @@ const Card = () => {
   let incrementestimatedbills=(value)=>{
       setestimatedbills(value)
   }
+  const netbillvalue=avgbillvalue*estimatedbills;
+  const revenue=netbillvalue-(referaldiscount/100)*netbillvalue-referalreward*estimatedbills;
 
 
   return (
+    <>
     <div className="rounded-md bg-white m-4 p-4 text-3xl font-bold font-sans subpixel-antialiased">
       <div className="math">Here's the math,play around!</div>
       <div className="each">
@@ -189,6 +193,8 @@ const Card = () => {
         </div>
       </div>
     </div>
+    <Renvenue net={netbillvalue} rev={revenue}/>
+    </>
   );
 };
 export default Card;
