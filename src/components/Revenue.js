@@ -12,7 +12,7 @@ const Revenue = (props) => {
       </div>
       <div className="revenuevia text-3xl font-semibold p-2">
         <h2>Revenue Via Referrals</h2>
-        <div className="amount font-semibold">&#8377;{props.rev}</div>
+        <div className="amount font-bold">&#8377;{props.rev}</div>
       </div>
     </div>
   );
