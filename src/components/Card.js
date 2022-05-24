@@ -48,11 +48,16 @@ const Card = () => {
   let incrementestimatedbills=(value)=>{
       setestimatedbills(value)
   }
+  const[option,setoption]=useState('')
   const netbillvalue=avgbillvalue-referalreward-(referaldiscount/100)*avgbillvalue;
   const totalbill=avgbillvalue*estimatedbills
-  const revenue=totalbill-(referaldiscount/100)*totalbill-referalreward*estimatedbills;
-
-
+  const revenue=totalbill-(referaldiscount/100)*totalbill-referalreward*estimatedbills-option;
+  const set1499=(event)=>{
+    setoption(event.target.value)
+  }
+const set2499=(event)=>{
+  setoption(event.target.value)
+}
   return (
     <>
     <div className="rounded-md bg-white m-4 p-4 text-3xl font-bold font-sans subpixel-antialiased">
@@ -193,7 +198,25 @@ const Card = () => {
           <div className="upper text-right">{details.estimatedbill.upper} Bills</div>
         </div>
       </div>
+      <div>
+    <div className="section text-2xl font-medium">
+          Subscription pricing
+        </div>
+       <form action="" className="flex justify-evenly">
+         <div>
+         <label htmlFor="">1499:</label>
+         <input type="radio" name="1499" value="1499" onChange={set1499}/>
+         </div>
+        <div>
+        <label htmlFor="">2499:</label>
+         <input type="radio" name="1499" value="2499" onChange={set2499}/>
+        </div>
+         
+
+       </form>
     </div>
+    </div>
+    
     <Renvenue net={netbillvalue} rev={revenue}/>
     </>
   );
