@@ -64,7 +64,7 @@ const set2499=(event)=>{
     <SmoothProvider skew={true} ease={1}>
     <div className="rounded-md bg-white m-4 p-4 text-3xl font-bold font-sans subpixel-antialiased" >
       <div className="math">Here's the math,play around!</div>
-      <div className="each">
+      <div className="each m-3">
         <div className="section text-2xl font-medium">
           {details.avgbillvalue.heading}
         </div>
@@ -98,7 +98,7 @@ const set2499=(event)=>{
           <div className="upper">&#8377;{details.avgbillvalue.upper}</div>
         </div>
       </div>
-      <div className="each">
+      <div className="each m-3">
         <div className="section text-2xl font-medium">
           {details.referaldiscount.heading}
         </div>
@@ -132,7 +132,7 @@ const set2499=(event)=>{
           <div className="upper">{details.referaldiscount.upper}%</div>
         </div>
       </div>
-      <div className="each">
+      <div className="each m-3">
         <div className="section text-2xl font-medium">
           {details.referalreward.heading}
         </div>
@@ -166,7 +166,7 @@ const set2499=(event)=>{
           <div className="upper">&#8377;{details.referalreward.upper}per Referral</div>
         </div>
       </div>
-      <div className="each">
+      <div className="each m-3">
         <div className="section text-2xl font-medium">
           {details.estimatedbill.heading}
         </div>
