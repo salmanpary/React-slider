@@ -206,11 +206,11 @@ const set2499=(event)=>{
         </div>
        <form action="" className="flex justify-evenly">
          <div>
-         <label htmlFor="">1499:</label>
+         <label htmlFor="">1499</label>
          <input type="radio" name="1499" value="1499" onChange={set1499}/>
          </div>
         <div>
-        <label htmlFor="">2499:</label>
+        <label htmlFor="">2499</label>
          <input type="radio" name="1499" value="2499" onChange={set2499}/>
         </div>
          
