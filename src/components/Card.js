@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import Renvenue from './Revenue'
+import { SmoothProvider } from 'react-smooth-scrolling'
 const details = {
   avgbillvalue: {
     lower: 200,
@@ -59,8 +60,9 @@ const set2499=(event)=>{
   setoption(event.target.value)
 }
   return (
-    <>
-    <div className="rounded-md bg-white m-4 p-4 text-3xl font-bold font-sans subpixel-antialiased">
+  
+    <SmoothProvider skew={true} ease={1}>
+    <div className="rounded-md bg-white m-4 p-4 text-3xl font-bold font-sans subpixel-antialiased" >
       <div className="math">Here's the math,play around!</div>
       <div className="each">
         <div className="section text-2xl font-medium">
@@ -218,7 +220,8 @@ const set2499=(event)=>{
     </div>
     
     <Renvenue net={netbillvalue} rev={revenue}/>
-    </>
+    </SmoothProvider>
+
   );
 };
 export default Card;
